@@ -8,7 +8,8 @@ terraform {
   }
 }
 provider "aws" {
-  region  = "us-east-1"
+  region  = var.aws_region
+  profile = "default"
 }
 resource "aws_instance" "my-ec2-vm" {
   ami                    = "ami-0ae8f15ae66fe8cda"
