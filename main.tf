@@ -1,4 +1,3 @@
-
 terraform {
   required_version = "~> 1.9.4" 
   required_providers {
@@ -26,7 +25,7 @@ resource "aws_instance" "my-ec2-vm" {
     EOF
   vpc_security_group_ids = [aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
   tags = {
-    "Name" = "eswar-server"
+    "Name" = "vinnu-server"
   }
 }
 resource "aws_key_pair" "deployer" {
